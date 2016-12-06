@@ -1,0 +1,31 @@
+<div id="new_recipe_wrapper">
+<br>
+<br>
+	<div id="new_recipe_form">
+		<%= form_for @recipe, html: {multipart: true} do |f| %>
+		  <div class="new_recipe_field" id="top_field">
+		  	<%= f.label "Title:" %>
+		  	<%= f.text_field :recipe_title, autocomplete: "off" %>
+		  </div>
+
+		   <div class="new_recipe_field">
+		  	<%= f.label "Photo:" %>
+		  	<%= f.file_field :avatar %>
+		   </div>
+
+		  <div class="new_recipe_field">
+		  	<%= f.label "Ingredients:" %>
+		  	<%= f.text_area :ingredients, autocomplete: "off" %>
+		  </div>
+
+		  <div class="new_recipe_field">
+		  	<%= f.label "Directions:" %>
+		  	<%= f.text_area :directions, autocomplete: "off" %>
+		  </div>
+
+		  <div class="submit_btn">
+		  	<%= f.submit "Add Recipe", class: "new_recipe_btn" %>
+		  </div>
+		<% end %>
+	</div>
+</div>

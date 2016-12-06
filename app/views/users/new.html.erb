@@ -1,0 +1,39 @@
+<div id="new_user_acc">
+<br>
+<br>
+	<h1> Create Your Own Account </h1>
+	<div class="new_user_form">
+		<%= form_for @user, html: {multipart: true} do |f| %>
+		<fieldset id="create_fieldset">
+			<legend id="acc_legend"> Enter Account Details: </legend>
+			<div class="new_acc_field">
+				<%= f.label "Username:" %>
+				<%= f.text_field :username, size: 20, autocomplete: "off" %>
+			</div>
+
+			<div class="new_acc_field">
+				<%= f.label "Email:" %>
+				<%= f.email_field :email, autocomplete: "off" %>
+			</div>
+	
+			<div class="new_acc_field">
+				<%= f.label "Password:" %>
+				<%= f.password_field :password, autocomplete: "off" %>
+			</div>
+
+			<div class="new_acc_field">
+				<%= f.label :password_confirmation, "Confirm Password:", autocomplete: "off" %>
+				<%= f.password_field :password_confirmation, autocomplete: "off" %>
+			</div>
+		<br>
+			<div class="submit-btn">
+				<%= f.submit "Create Account", class: "btn-style-create" %>
+			</div>
+		</fieldset>
+
+		<% end %>
+	</div>
+</div>
+
+<br>
+<br>

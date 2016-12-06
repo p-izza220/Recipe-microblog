@@ -1,0 +1,303 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+*{
+	font-family: times, serif;
+}
+
+/* Application.html.erb Styling */
+#search-form{
+	margin-left:70%;
+}
+.search_btn_input{
+	float: right;
+}
+.search_btn{
+	float: right;
+}
+
+.nav_links{
+	margin-left: 5.5px;
+	margin-right: 3.5px;
+	margin-top: 3px;
+	padding-top: 5px;
+}
+
+#linkme{
+	margin-left: 5.5px;
+	margin-right: 3.5px;
+	margin-top: 3px;
+	padding-top: 5px;
+}
+/*#main-nav{
+	margin-top: 10px;
+	margin-left: 15px;
+}*/
+
+
+/* nav bar styling */
+#search-form{
+	font-size: 12px;
+	float: right;
+	margin-left: 5px;
+}
+
+.search_btn{
+	width: 65px;
+	height: 22px;
+	padding-bottom: 8px;
+	border-radius: 10px;
+/*	padding: 3px;*/
+	margin: 2px;
+	display: relative;
+	top: -1px;
+/*	margin-top: 2px;*/
+}
+
+.search_btn_input{
+	width: 130px;
+	height:23px;
+/*	margin-top: 5px;*/
+}
+
+.nav{
+	font-size: 13px;	 
+}
+
+/* sessions#new styling */
+#newSession_fieldset{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 450px;
+	padding: 5 10px;
+	margin-left: 25px;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+    margin: 0 auto;
+    opacity: .9;
+
+
+}
+
+#newSession_legend{
+	border-bottom: 0px;
+	width:auto !important;
+	padding: 0.2em 1em;
+}
+
+.label {
+	padding: 2px;
+	margin: 0 auto;
+	width: 73px !important;
+}
+.input_field{
+	margin-left: 0.5em;
+	margin-top: 3px;
+}
+
+.login_field .label{
+	color: black;
+}
+
+.login_btn{
+	margin-top: 5px;
+	width: 70px;
+	border-radius: 10px;
+	padding: 3px;
+
+}
+
+
+/* Users Show */
+#recipe_descrip{
+	border: 1px groove #ddd;
+	width: 350px;
+	margin: 0 auto;
+	margin-left:50px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-bottom: 25px;
+}
+
+#my_page{
+	text-align: center;
+	font-size: 35px;
+}
+
+
+
+/* Recipes New */
+#new_recipe_wrapper{
+
+}
+
+#new_recipe_form{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 450px;
+	padding: 5 10px;
+	margin-left: 25px;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+    margin: 0 auto;
+}
+
+#new_recipe_form{
+	width: 500px;
+	text-align: center;
+/*	display: inline-block;*/
+	margin-top: 10px;
+}
+
+#new_recipe_form textarea, input{
+	width: 180px;
+	margin-left: 0.5em;
+	padding: .5px;
+	background-color: white;
+	margin-top: 10px;
+	margin: 0 auto;
+
+}
+
+.new_recipe_field input[type=file] {
+	display: inline;
+}
+#new_recipe_form label{
+	width: 140px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.new_recipe_field{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#top_field{
+	padding-top: 15px;
+}
+
+.new_recipe_btn{
+	width: 130px;
+	border-radius: 10px;
+	padding: 3px;
+
+}
+
+/* Users New */
+
+
+#new_user_acc{
+	text-align: center;
+}
+
+.new_user_form label{
+	width: 140px;
+	text-align: right;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#create_fieldset{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 450px;
+	padding: 5 10px;
+	margin-left: 25px;
+	margin-top: 5px;
+	margin: 0 auto;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+    margin: 0 auto;
+    opacity: .9;
+}
+
+#acc_legend{
+	color: black;
+	border-bottom: 0px;
+	width:auto !important;
+	padding: 0.2em 1em;
+}
+
+.btn-style{
+	width: 70px;
+	border-radius: 10px;
+	padding: 3px;
+}
+
+.btn-style-create{
+	width: 170px;
+	border-radius: 10px;
+	padding: 3px;
+}
+
+/* Users show */
+
+/* Users Edit */
+#edit_acc{
+	border: 1px groove #ddd;
+	text-align: center;
+	padding: 0 1.4em 1.4em 1.4em;
+	width: 90%;
+	max-width: 600px;
+	padding-top: 15px;
+	margin-left: 25%;
+	-webkit-box-shadow:  0px 0px 0px 0px #000;
+    box-shadow:  0px 0px 0px 0px #000;
+}
+
+.edit_acc_form{
+	text-align: center;
+}
+
+.edit_acc_form label{
+		width: 120px;
+	text-align: right;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.edit_acc_form input{
+		width: 120px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.btn_style{
+	width: 170px;
+	border-radius: 11px;
+	padding: 3px;
+	background-color: white;
+}
+
+/* GOODBYE */
+#error_message{
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+
+
+
+

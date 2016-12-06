@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipeMicroblog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Bootstap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+  <body>
+  		<% if session[:user_id] != nil %>
+  		<nav id="main-nav">
+  			<div>
+  			  	<ul class="nav navbar-nav" id="linkme">
+  				<%= link_to "All Recipes", home_path, class: "nav_links" %>
+          <%= link_to "New Recipe", recipes_new_path, class: "nav_links" %>
+          <%= link_to "My Profile", users_show_path(session[:user_id]), class: "nav_links" %>
+          <%= link_to "Settings", users_edit_path(session[:user_id]), class: "nav_links" %>
+  				<%= link_to "Sign Out", logout_path, class: "nav_links", :method => :delete %>
+         
+          <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+             <%= submit_tag "Search", :name => nil, class: "search_btn" %>
+             <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "search_btn_input" %>
+          <% end %>
+  			</ul>
+  		<% else %>
+  				<ul class="nav navbar-nav">
+  					<%= link_to "All Recipes", home_path, class: "nav_links" %>
+  					<%= link_to "Sign In", login_path, class: "nav_links" %>
+            <%= link_to "Sign Up", users_path, class: "nav_links" %>
+            
+        <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+            <%= submit_tag "Search", :name => nil, class: "search_btn" %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "search_btn_input" %>
+        <% end %>
+  		<% end %>
+  				</ul>
+  			</div>
+        <br>
+        <br>
+  		</nav>
+
+    <%= yield %>
+  </body>
+</html>
