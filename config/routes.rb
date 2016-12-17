@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get "/recipes"    => "recipes#index", as: "home"
+  root 'recipes#index', as: 'home'
+
+  get "/recipes"    => "recipes#index"
   get "/recipes/new" => "recipes#new", as: "recipes_new"
   post "/recipes"    => "recipes#create"
   get "/recipes/:id" => "recipes#show", as: "recipes_show"
