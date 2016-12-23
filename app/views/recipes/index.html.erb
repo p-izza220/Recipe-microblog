@@ -5,11 +5,12 @@
 	<div class="row">
 		<% @recipes.each do |recipe| %>
 		<div class="col-md-4 col-lg-3" id="recipe_descrip">
-		  Posted by: <%= link_to recipe.user.username, users_show_path(recipe.user) %> <br>
+		<img src= "<%= recipe.avatar %>"  height ="155px" id ="recipe_index_image"/> 
+		  <%= link_to recipe.user.username, users_show_path(recipe.user), class: "user_link" %> <br>
 		  <%= recipe.recipe_title %> <br>
-		  <img src= "<%= recipe.avatar %>"  height ="85px"/> <br>
-		  <%= recipe.ingredients %> <br>
-		  <%= recipe.directions %> 
+		  <br>
+		  <br>
+		  <br>
 		</div> 
 		<% end if @recipes %>
 	</div>

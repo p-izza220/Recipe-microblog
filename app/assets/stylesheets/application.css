@@ -16,7 +16,7 @@
 
 *{
 	font-family: times, serif;
-	background-image: url('beige.jpeg');
+	background-image: url('beigebackground.jpg');
 	background-size: cover;
 }
 
@@ -128,10 +128,11 @@
 /* Users Show */
 #recipe_descrip{
 	border: 1px groove #ddd;
-	width: 350px;
+	box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.3);
+	width: 205px;
 	margin: 0 auto;
 	margin-left:50px;
-	padding-top: 3px;
+	padding-top: 5px;
 	padding-bottom: 3px;
 	margin-bottom: 25px;
 }
@@ -139,6 +140,24 @@
 #my_page{
 	text-align: center;
 	font-size: 35px;
+}
+
+#recipe_index_image{
+	margin: 0 auto;
+/*	padding-top: 10px;*/
+	padding-right: 12px;
+/*	display: block;*/
+	padding-top: 0;
+	max-width: 185px;
+	
+
+}
+
+.user_link{
+	padding-top: 0;
+	float: right;
+	font-size: smaller;
+
 }
 
 
